@@ -1,7 +1,4 @@
 import React from "react";
-import geovision from '../img/geovision.jpg';
-import google_earth_kart from '../img/google_earth_kart.jpg';
-
 
 const Projects = () => {
   const projects = [
@@ -9,7 +6,7 @@ const Projects = () => {
       id: 1,
       title: "Google Earth Kart",
       description: "Google Earth Kart is a web-based video game that was created in a group for my Vanderbilt CS Senior Immersion Project. This video game uniquely incorporates Google Earth 3D rendering, allowing players to select various car models and race around Vanderbilt's campus. Demonstrates React and Websockets while providing a fun racing experience.",
-      image: {geovision},
+      image: './img/google_earth_kart.jpg',
       tags: ["ThreeJS", "Websockets", "ReactJS"],
       githubLink: "https://github.com/vu-cs4289-25s/google_earth_kart",
       demoLink: null,
@@ -20,7 +17,7 @@ const Projects = () => {
       id: 2,
       title: "Geovision Industries Website",
       description: "Created a website using a combination of AI and manual coding to meet the client’s requested features on a short timeline.",
-      image: {google_earth_kart},
+      image: './img/geovision.jpg',
       tags: ["Web Development", "Typescript", "UI/UX Design"],
       githubLink: "https://github.com/jacfrist/geovision-hub",
       demoLink: "https://geovisionindustries.vercel.app/",
@@ -34,46 +31,56 @@ const Projects = () => {
     <div>
       {/* Header */}
       <section className="container-section">
-        <div class="container py-5">
-            <div class="col-1"></div>
-            <div class="col-11">
-        <h1 class="title">My Projects</h1>
+        <div className="container py-5">
+            <div className="row">
+            <div className="col-1"></div>
+            <div className="col-11">
+              </div>
+        <h1 className="title">My Projects</h1>
         <p className="lead text-battleship-gray mx-auto" style={{ maxWidth: "800px" }}>A collection of projects I've made during my time at Vanderbilt University.</p>
         </div>
         </div>
       </section>
 
-      {/* Featured Projects */}
-      {featuredProjects.length > 0 && (
         <section className="container bg-white-50 rounded" style={{padding:"32px"}}>
-          <h2 class="section-title">Featured Projects</h2>
-          <div class="flex flex-wrap">
-            {featuredProjects.map(project => (
-              <div key={project.id} className="project-card">
-                {project.award && <span className="award">{project.award}</span>}
-                <img src={project.image} alt={project.title} className="project-image" />
+          <h2 className="section-title">Featured Projects</h2>
+          <div className="flex flex-wrap">
+
+            <div className="project-card">
+                <span className="award">3rd Place - VU CS Immersion Showcase</span>
+                <img src='./img/google_earth_kart.jpg' alt="Google Earth Kart" className="project-image" />
                 <div className="project-content">
-                  <h3>{project.title}</h3>
+                  <h3>Google Earth Kart</h3>
                   <div className="project-tags">
-                    {project.tags.map(tag => (
-                      <span key={tag} className="tag">{tag}</span>
-                    ))}
+                    <span className="tag">ThreeJS</span>
+                    <span className="tag">WebSockets</span>
+                    <span className="tag">ReactJS</span>
                   </div>
-                  <p>{project.description}</p>
+                  <p>Google Earth Kart is a web-based video game that was created in a group for my Vanderbilt CS Senior Immersion Project. This video game uniquely incorporates Google Earth 3D rendering, allowing players to select various car models and race around Vanderbilt's campus. Demonstrates React and Websockets while providing a fun racing experience.</p>
                   <div className="project-links">
-                    {project.githubLink && (
-                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">GitHub</a>
-                    )}
-                    {project.demoLink && (
-                      <a href={project.demoLink} target="_blank" rel="noopener noreferrer">Live Demo</a>
-                    )}
+                    <a href="https://github.com/vu-cs4289-25s/google_earth_kart" target="_blank" rel="noopener noreferrer">GitHub</a>
                   </div>
                 </div>
               </div>
-            ))}
+
+              <div className="project-card">
+                <img src='./img/geovision.jpg' alt="Geovision Industries Website" className="project-image" />
+                <div className="project-content">
+                  <h3>Geovision Industries Website</h3>
+                  <div className="project-tags">
+                    <span className="tag">Web Development</span>
+                    <span className="tag">TypeScript</span>
+                    <span className="tag">UI/UX Design</span>
+                  </div>
+                  <p>Created a website using a combination of AI and manual coding to meet the client’s requested features on a short timeline.</p>
+                  <div className="project-links">
+                      <a href="https://geovisionindustries.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                  </div>
+                </div>
+              </div>
+
           </div>
         </section>
-      )}
     </div>
   );
 };

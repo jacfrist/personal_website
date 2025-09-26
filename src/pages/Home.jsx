@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import headshot from '../img/headshot.png';
 
 const Home = () => {
   return (
@@ -35,7 +34,7 @@ const Home = () => {
           {/* Image */}
           <div className="col-2" style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <img
-                src={headshot}
+                src="./img/headshot.png"
                 alt="Profile photo"
                 className="rounded-circle"
                 style={{ width: '250px', height: '250px', objectFit: 'cover' }}
