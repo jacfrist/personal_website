@@ -7,7 +7,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     clean: true,
-    publicPath: '/', // needed for BrowserRouter
+    publicPath: './', // needed for BrowserRouter
   },
   mode: 'development',
   module: {
