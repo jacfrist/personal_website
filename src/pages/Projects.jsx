@@ -1,4 +1,7 @@
 import React from "react";
+import geovision from '../img/geovision.jpg';
+import google_earth_kart from '../img/google_earth_kart.jpg';
+
 
 const Projects = () => {
   const projects = [
@@ -6,7 +9,7 @@ const Projects = () => {
       id: 1,
       title: "Google Earth Kart",
       description: "Google Earth Kart is a web-based video game that was created in a group for my Vanderbilt CS Senior Immersion Project. This video game uniquely incorporates Google Earth 3D rendering, allowing players to select various car models and race around Vanderbilt's campus. Demonstrates React and Websockets while providing a fun racing experience.",
-      image: "/img/google_earth_kart.jpg",
+      image: {geovision},
       tags: ["ThreeJS", "Websockets", "ReactJS"],
       githubLink: "https://github.com/vu-cs4289-25s/google_earth_kart",
       demoLink: null,
@@ -17,7 +20,7 @@ const Projects = () => {
       id: 2,
       title: "Geovision Industries Website",
       description: "Created a website using a combination of AI and manual coding to meet the client’s requested features on a short timeline.",
-      image: "/img/geovision.jpg",
+      image: {google_earth_kart},
       tags: ["Web Development", "Typescript", "UI/UX Design"],
       githubLink: "https://github.com/jacfrist/geovision-hub",
       demoLink: "https://geovisionindustries.vercel.app/",
